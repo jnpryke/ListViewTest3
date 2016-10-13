@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context="com.example.john.listviewtest3.MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:layout_weight="2"
+            android:id="@+id/enterIPCsEditText"
+            android:hint="Enter IPCs"
+            android:gravity="center_vertical|center_horizontal"
+            android:maxLength="3"
+            android:imeOptions="actionDone"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Reset\nAll"
+            style="@style/button_red"
+            android:id="@+id/resetButton"
+            android:onClick="Reset" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Reset\nUnits"
+            style="@style/button_green"
+            android:id="@+id/resetUnitsButton"
+            android:onClick="ResetUnitsViewButton" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:id="@+id/listView"
+        android:layout_weight="6" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Change: 0"
+            android:textSize="25sp"
+            android:textColor="#000000"
+            android:id="@+id/changeTextView"
+            android:layout_weight="1"
+            android:layout_gravity="bottom|center_horizontal"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Summary"
+            style="@style/button_red"
+            android:id="@+id/summaryButton" />
+
+    </LinearLayout>
+</LinearLayout>
