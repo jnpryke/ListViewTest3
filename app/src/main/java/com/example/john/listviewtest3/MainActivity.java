@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 TextView summaryTextView = (TextView) dialog.findViewById(R.id.summaryTextView);
                 summaryTextView.setText(unitInfo.makeUnitInfoString(pos));
 
-                //set up button
+                //This is setting up the button in the alert dialog box to close when pressed
                 Button button = (Button) dialog.findViewById(R.id.cancelSummaryButton);
                 button.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -186,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
         lv.setAdapter(new CustomAdapter(this, AnAImages, unitQuantityArray,unitPriceArray ));
     }
 
+    //check to see if any code is really using this function, if not delete. Because is basically the same as ResetUnits
     public void ResetUnitsViewButton(View view){
         if(!IPCsEmpty()) {
             changeTextView.setText("Change: " + Integer.parseInt(enterIPCsEditText.getText().toString()));
