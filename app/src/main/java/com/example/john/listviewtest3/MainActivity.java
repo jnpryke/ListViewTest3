@@ -26,18 +26,7 @@ public class MainActivity extends AppCompatActivity {
     static TextView changeTextView;
     TextView unitQuantityTextView;
     Button summaryButton;
-
-    public static int [] AnAImages = {R.drawable.infantry, R.drawable.artillery, R.drawable.tank, R.drawable.aaa,
-                                        R.drawable.fighter,R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
-                                        R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
-                                        R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.repairindustrialcomplex};
-
-    public int unitQuantityArray[] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    public static int unitPriceArray[] = {3,4,6,5,10,12,6,7,8,12,20,14,15,1};
-
-    public String[] unitNamesStringArray = {"Infantry", "Artillery", "Tank", "AAA", "Fighter", "Bomber", "Submarine", "Transport",
-                                            "Destroyer", "Cruiser", "Battleship", "Aircraft Carrier", "Industrial Complex",
-                                            "Repair Industrial Complex"};
+    static UnitInfo unitInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,8 +36,11 @@ public class MainActivity extends AppCompatActivity {
 
         context=this;
 
+        unitInfo = new UnitInfo(1);
+
         lv = (ListView) findViewById(R.id.listView);
-        lv.setAdapter(new CustomAdapter(this, AnAImages, unitQuantityArray,unitPriceArray ));
+        lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
+                unitInfo.getUnitPriceArray()));
 
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -143,12 +135,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public static void minusUnitCostFromIPCs(int position){
+        int[] unitPriceArray = unitInfo.getUnitPriceArray();
         int IPCs = Integer.parseInt(enterIPCsEditText.getText().toString());
         costOfUnits +=  unitPriceArray[position];
         changeTextView.setText("Change: " + Integer.toString(IPCs - costOfUnits));
     }
 
     public static void addUnitCostToIPCs(int position){
+        int[] unitPriceArray = unitInfo.getUnitPriceArray();
         int IPCs = Integer.parseInt(enterIPCsEditText.getText().toString());
         costOfUnits -=  unitPriceArray[position];
         changeTextView.setText("Change: " + Integer.toString(IPCs - costOfUnits));
@@ -170,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
     public static boolean notEnoughChange(int position){
         int IPCs = Integer.parseInt(enterIPCsEditText.getText().toString());
         int change = IPCs - costOfUnits;
+        int[] unitPriceArray = unitInfo.getUnitPriceArray();
 
         if(unitPriceArray[position] > change)
             return true;
@@ -182,7 +177,8 @@ public class MainActivity extends AppCompatActivity {
         changeTextView.setText("Change: 0");
         costOfUnits = 0;
         CustomAdapter.reset();
-        lv.setAdapter(new CustomAdapter(this, AnAImages, unitQuantityArray,unitPriceArray ));
+        lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
+                unitInfo.getUnitPriceArray()));
     }
 
     //check to see if any code is really using this function, if not delete. Because is basically the same as ResetUnits
@@ -192,7 +188,8 @@ public class MainActivity extends AppCompatActivity {
         }
         costOfUnits = 0;
         CustomAdapter.reset();
-        lv.setAdapter(new CustomAdapter(this, AnAImages, unitQuantityArray,unitPriceArray ));
+        lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
+                unitInfo.getUnitPriceArray()));
     }
 
     public void ResetUnits(){
@@ -204,11 +201,12 @@ public class MainActivity extends AppCompatActivity {
         }
         costOfUnits = 0;
         CustomAdapter.reset();
-        lv.setAdapter(new CustomAdapter(this, AnAImages, unitQuantityArray,unitPriceArray ));
+        lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
+                unitInfo.getUnitPriceArray()));
     }
 
     public String makeSummaryString(){
-
+        String[] unitNamesStringArray = unitInfo.getUnitNamesStringArray();
         int[] unitQuantityArray = CustomAdapter.getUnitQuantityArray();
         String summaryString = "";
         int IPCs = 0;

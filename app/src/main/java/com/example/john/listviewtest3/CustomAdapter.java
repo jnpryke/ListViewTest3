@@ -118,7 +118,7 @@ public class CustomAdapter extends BaseAdapter {
 
     public static void reset(){
 
-        for(int i = 0; i < 14; i++){
+        for(int i = 0; i < unitQuantityArray.length; i++){
             unitQuantityArray[i] = 0;
         }
     }
