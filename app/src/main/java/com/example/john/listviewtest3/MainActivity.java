@@ -51,10 +51,8 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setContentView(R.layout.summary_dialog_layout);
                 dialog.setCancelable(true);
 
-                DialogBoxUnitInfo dialogBoxUnitInfo = new DialogBoxUnitInfo();
-
                 TextView summaryTextView = (TextView) dialog.findViewById(R.id.summaryTextView);
-                summaryTextView.setText(dialogBoxUnitInfo.makeUnitInfoString(pos));
+                summaryTextView.setText(makeUnitInfoString(pos));
 
                 //This is setting up the button in the alert dialog box to close when pressed
                 Button button = (Button) dialog.findViewById(R.id.cancelSummaryButton);
@@ -228,4 +226,23 @@ public class MainActivity extends AppCompatActivity {
         return summaryString;
     }
 
+    public String makeUnitInfoString(int position){
+        String unitInfoString = "";
+        String[] unitNamesStringArray = unitInfo.getUnitNamesStringArray();
+        int[][] unitStatsInfo = unitInfo.getUnitStatsInfoArray();
+
+        unitInfoString += unitNamesStringArray[position] + "\n";
+        unitInfoString += "Cost: " + unitStatsInfo[position][0] + "\n";
+        if(unitStatsInfo[position][1] != 0) {
+            unitInfoString += "Attack: " + unitStatsInfo[position][1] + "\n";
+        }
+        if(unitStatsInfo[position][2] != 0) {
+            unitInfoString += "Defense: " + unitStatsInfo[position][2] + "\n";
+        }
+        if(unitStatsInfo[position][3] != 0) {
+            unitInfoString += "Movement: " + unitStatsInfo[position][3];
+        }
+
+        return unitInfoString;
+    }
 }
