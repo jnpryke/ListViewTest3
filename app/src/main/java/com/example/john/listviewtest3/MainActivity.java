@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -60,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 dialog.setContentView(R.layout.summary_dialog_layout);
                 dialog.setCancelable(true);
 
-                UnitInfo unitInfo = new UnitInfo();
+                DialogBoxUnitInfo dialogBoxUnitInfo = new DialogBoxUnitInfo();
 
                 TextView summaryTextView = (TextView) dialog.findViewById(R.id.summaryTextView);
-                summaryTextView.setText(unitInfo.makeUnitInfoString(pos));
+                summaryTextView.setText(dialogBoxUnitInfo.makeUnitInfoString(pos));
 
                 //This is setting up the button in the alert dialog box to close when pressed
                 Button button = (Button) dialog.findViewById(R.id.cancelSummaryButton);

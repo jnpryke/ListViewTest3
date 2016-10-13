@@ -3,7 +3,7 @@ package com.example.john.listviewtest3;
 /**
  * Created by John on 10/8/2016.
  */
-public class UnitInfo {
+public class DialogBoxUnitInfo {
     private int cost, attack, defense, movement;
     private String[] unitNamesStringArray = {"Infantry", "Artillery", "Tank", "AAA", "Fighter", "Bomber", "Submarine", "Transport",
             "Destroyer", "Cruiser", "Battleship", "Aircraft Carrier", "Industrial Complex",
@@ -14,7 +14,7 @@ public class UnitInfo {
 
 
 
-    public UnitInfo(){
+    public DialogBoxUnitInfo(){
 
     }
 
