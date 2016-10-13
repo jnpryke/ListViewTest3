@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UnitCalc</string>
+    <string name="version">Select Version</string>
 </resources>
