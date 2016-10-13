@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.version) {
-            Toast.makeText(context, "selection is working", Toast.LENGTH_SHORT).show();
+            setAnAVersion(0); //this is a test to see how it will respond
             return true;
         }
 
@@ -171,6 +171,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Reset(View view){
+        enterIPCsEditText.setText("");
+        changeTextView.setText("Change: 0");
+        costOfUnits = 0;
+        CustomAdapter.reset();
+        lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
+                unitInfo.getUnitPriceArray()));
+    }
+
+    public void ResetAll(){
         enterIPCsEditText.setText("");
         changeTextView.setText("Change: 0");
         costOfUnits = 0;
@@ -244,5 +253,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return unitInfoString;
+    }
+
+    public void setAnAVersion(int version){
+        unitInfo.setVersion(version);
+        ResetAll();
+
     }
 }
