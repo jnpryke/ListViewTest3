@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("A&A UnitCalc");
+        setTitle("A&A UnitCalc"); //this displays white text color. create a style to change this
         setContentView(R.layout.activity_main);
 
         context=this;
