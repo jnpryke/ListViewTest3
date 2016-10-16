@@ -11,14 +11,16 @@ public class UnitInfo {
     private String[] unitNamesStringArray;
     private int[][] unitStatsInfoArray;
     private int [] AnAImages;
+    private String versionName;
 
     UnitInfo(int version){
         setVersion(version);
     }
 
     public void setVersion(int version){
-        //version 0 = Axis and Allies 1942 second edition
+        //version 0 = Axis and Allies 1942 Second Edition
         if(version == 0){
+            versionName="Axis and Allies 1942 second edition";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0};
             unitPriceArray = new int[]{3,4,6,5,10,12,6,7,8,12,20,14,15,1};
             unitNamesStringArray = new String[]{"Infantry", "Artillery", "Tank", "AAA", "Fighter", "Bomber",
@@ -35,6 +37,7 @@ public class UnitInfo {
 
         //version 1 = Axis and Allies 1941
         if(version == 1){
+            versionName="Axis and Allies 1941";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0};
             unitPriceArray = new int[]{3,6,10,12,6,7,8,16,12};
             unitNamesStringArray = new String[]{"Infantry", "Tank", "Fighter", "Bomber",
@@ -47,27 +50,29 @@ public class UnitInfo {
 
         }
         //!complete
-        //version 2 = Axis and Allies 1940 Pacific/Europe second edition
+        //version 2 = Axis and Allies 1940 Pacific/Europe Second Edition
         if(version == 2){
+            versionName="Axis and Allies 1940 Pacific/Europe second edition";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
             unitPriceArray = new int[]{3,4,4,6,5,10,11,12,6,7,8,12,20,16,30,12,1,20,15,15};
             unitNamesStringArray = new String[]{"Infantry", "Artillery", "Mechanized Infantry", "Tank", "AAA", "Fighter",
                     "Tactical Bomber", "Strategic Bomber", "Submarine", "Transport", "Destroyer", "Cruiser", "Battleship",
                     "Aircraft Carrier", "Major Industrial Complex", "Minor Industrial Complex","Repair Industrial Complex",
                     "Upgrade Industrial Complex","Air Base","Naval Base"};
-            //!complete
+            //incomplete
             AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.tank, R.drawable.aaa,
                     R.drawable.fighter,R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
                     R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
                     R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.repairindustrialcomplex};
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{4,1,2,2},{6,3,3,2},{5,0,0,1},{10,3,4,4},{11,3,3,4},
-                    {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,1,2,2},{30,0,0,0}, {15,0,0,0},
+                    {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{30,0,0,0}, {15,0,0,0},
                     {1,0,0,0},{20,0,0,0},{15,0,0,0},{15,0,0,0}};
 
         }
 
         //version 3 = Axis and Allies 1942 Spring
         if(version == 3){
+            versionName="Axis and Allies 1942 Spring";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0};
             unitPriceArray = new int[]{3,4,6,5,10,12,6,7,8,12,20,14,15,1};
             unitNamesStringArray = new String[]{"Infantry", "Artillery", "Tank", "AAA", "Fighter", "Bomber",
@@ -81,6 +86,45 @@ public class UnitInfo {
                     {6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{14,1,2,2},{15,0,0,0},{1,0,0,0}};
 
         }
+
+        //version 4 = Axis and Allies Anniversary Edition
+        if(version == 4){
+            versionName="Axis and Allies Anniversary Edition";
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+            unitPriceArray = new int[]{3,4,6,5,10,12,6,7,8,12,20,14,15,1};
+            unitNamesStringArray = new String[]{"Infantry", "Artillery", "Tank", "AAA", "Fighter", "Bomber",
+                    "Submarine", "Transport", "Destroyer", "Cruiser", "Battleship", "Aircraft Carrier",
+                    "Industrial Complex", "Repair Industrial Complex"};
+            AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.tank, R.drawable.aaa,
+                    R.drawable.fighter,R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
+                    R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
+                    R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.repairindustrialcomplex};
+            unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{5,3,3,2},{6,0,1,1},{10,3,4,4},{12,4,1,6},
+                    {6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{14,1,2,2},{15,0,0,0},{1,0,0,0}};
+
+        }
+
+        //!complete
+        //version 5 = Axis and Allies 1940 Pacific/Europe
+        if(version == 5){
+            versionName="Axis and Allies 1940 Pacific/Europe second edition";
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+            unitPriceArray = new int[]{3,4,4,6,5,10,11,12,6,7,8,12,20,16,30,12,1,20,15,15};
+            unitNamesStringArray = new String[]{"Infantry", "Artillery", "Mechanized Infantry", "Tank", "AAA", "Fighter",
+                    "Tactical Bomber", "Strategic Bomber", "Submarine", "Transport", "Destroyer", "Cruiser", "Battleship",
+                    "Aircraft Carrier", "Major Industrial Complex", "Minor Industrial Complex","Repair Industrial Complex",
+                    "Upgrade Industrial Complex","Air Base","Naval Base"};
+            //incomplete
+            AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.tank, R.drawable.aaa,
+                    R.drawable.fighter,R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
+                    R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
+                    R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.repairindustrialcomplex};
+            unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{4,1,2,2},{6,3,3,2},{6,0,1,1},{10,3,4,4},{11,3,3,4},
+                    {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{30,0,0,0}, {15,0,0,0},
+                    {1,0,0,0},{20,0,0,0},{15,0,0,0},{15,0,0,0}};
+
+        }
+
     }
 
     public int[] getAnAImages() {

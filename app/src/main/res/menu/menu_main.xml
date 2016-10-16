@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.john.deletethis.MainActivity" >
     <item android:id="@+id/version"
-        android:title="@string/version"
+        android:title="@string/select_version"
         android:orderInCategory="100"
         app:showAsAction="always" />
 </menu>
