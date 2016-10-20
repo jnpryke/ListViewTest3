@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="versions">
+        <item>A\u0026A 1942 Second Edition</item>
+        <item>A\u0026A 1941</item>
+        <item>A\u0026A 1940 Pacific/Europe Second Edition</item>
+        <item>A\u0026A 1942 Spring</item>
+        <item>A\u0026A Anniversary Edition</item>
+        <item>A\u0026A 1940 Pacific/Europe</item>
+    </string-array>
+</resources>
