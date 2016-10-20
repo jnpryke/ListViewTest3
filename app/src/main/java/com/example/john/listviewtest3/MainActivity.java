@@ -172,11 +172,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.version) {
-            //call alert dialog box with radio buttons
             makeDialogBox();
-            //setAnAVersion();
-            //check to see if version has changed
-
             return true;
         }
 
@@ -305,7 +301,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    //this was a testing function. Should be discarded. Should be noted that this works.Maybe i will keep it
     public void setAnAVersion() {
         File file = new File(path, FILENAME);
         int length = (int) file.length();
@@ -329,15 +324,6 @@ public class MainActivity extends AppCompatActivity {
         ResetAll();
     }
 
-    //trying to get selectVersionDialogFragment to call this
-    public void ResetAll2() {
-        enterIPCsEditText.setText("");
-        changeTextView.setText("Change: 0");
-        costOfUnits = 0;
-        CustomAdapter.reset();
-        lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
-                unitInfo.getUnitPriceArray()));
-    }
 
     public void makeDialogBox(){
 
@@ -365,9 +351,6 @@ public class MainActivity extends AppCompatActivity {
         return -1;
     }
 
-    public static void someHow(){
-       //this doesnt work
-    }
 
 }
 

@@ -3,6 +3,8 @@ package com.example.john.listviewtest3;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.app.Fragment;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -20,7 +22,7 @@ import static com.example.john.listviewtest3.MainActivity.FILENAME;
  * Created by John on 10/17/2016.
  */
 
-public class SelectVersionDialogFragment extends DialogFragment{
+public class SelectVersionDialogFragment extends DialogFragment {
 
     String path;
     int checked;
@@ -50,7 +52,10 @@ public class SelectVersionDialogFragment extends DialogFragment{
                         // User clicked OK, so save the mSelectedItems results somewhere
                         // or return them to the component that opened the dialog
                         saveVersion(version);
-                        MainActivity.someHow();
+
+                        //MainActivity.someHow();
+                        ((MainActivity)getActivity()).setAnAVersion();
+
                     }
                 })
                 .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
@@ -97,3 +102,4 @@ public class SelectVersionDialogFragment extends DialogFragment{
         }
     }
 }
+
