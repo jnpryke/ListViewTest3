@@ -14,15 +14,10 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
     public File filePath;
     String path;
     static final int DEFAULT_VERSION = 0;
-
-
     FileOutputStream streamOut;
 
     @Override
@@ -175,6 +168,8 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    // Sums all of the units that the user has bought and displays the
+    // difference in the change textview
     public static void minusUnitCostFromIPCs(int position) {
         int[] unitPriceArray = unitInfo.getUnitPriceArray();
         int IPCs = Integer.parseInt(enterIPCsEditText.getText().toString());
@@ -182,6 +177,8 @@ public class MainActivity extends AppCompatActivity {
         changeTextView.setText("Change: " + Integer.toString(IPCs - costOfUnits));
     }
 
+    // Sums all of the units that the user has bought and displays the
+    // difference in the change textview
     public static void addUnitCostToIPCs(int position) {
         int[] unitPriceArray = unitInfo.getUnitPriceArray();
         int IPCs = Integer.parseInt(enterIPCsEditText.getText().toString());
@@ -201,6 +198,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Checks to see if the user can purchase more units
     public static boolean notEnoughChange(int position) {
         int IPCs = Integer.parseInt(enterIPCsEditText.getText().toString());
         int change = IPCs - costOfUnits;
@@ -212,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
     }
 
+    // Resets the enter ipcs value. Changes unit quantities to 0. Resets the listview view.
     public void ResetAll(View view) {
         enterIPCsEditText.setText("");
         changeTextView.setText("Change: 0");
@@ -221,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
                 unitInfo.getUnitPriceArray()));
     }
 
+    // Resets the enter ipcs value. Changes unit quantities to 0. Resets the listview view.
     public void ResetAll() {
         enterIPCsEditText.setText("");
         changeTextView.setText("Change: 0");
@@ -230,6 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 unitInfo.getUnitPriceArray()));
     }
 
+    // Returns all of the units quantities to 0 and resets the view
     public void ResetUnitsViewButton(View view) {
         if (!IPCsEmpty()) {
             changeTextView.setText("Change: " + Integer.parseInt(enterIPCsEditText.getText().toString()));
@@ -240,6 +241,7 @@ public class MainActivity extends AppCompatActivity {
                 unitInfo.getUnitPriceArray()));
     }
 
+    // Returns all of the units quantities to 0 and resets the view
     public void ResetUnits() {
         if (!IPCsEmpty()) {
             changeTextView.setText("Change: " + Integer.parseInt(enterIPCsEditText.getText().toString()));
@@ -298,27 +300,9 @@ public class MainActivity extends AppCompatActivity {
         return unitInfoString;
     }
 
-    // Reads the number in AnA_version.txt
+    // Sets the UnitInfo version and resets the view
     public void setAnAVersion() {
-        File file = new File(path, FILENAME);
-        int length = (int) file.length();
-        byte[] bytes = new byte[length];
-        int version = 0;
-
-        try {
-            FileInputStream streamIn = new FileInputStream(file);
-            streamIn.read(bytes);
-            streamIn.close();
-
-            String contents = new String(bytes);
-            version = Integer.parseInt(contents.trim());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-        unitInfo.setVersion(version);
-
+        unitInfo.setVersion(getVersion());
         ResetAll();
     }
 
