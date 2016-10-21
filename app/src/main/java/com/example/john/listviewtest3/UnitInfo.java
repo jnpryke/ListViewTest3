@@ -60,10 +60,12 @@ public class UnitInfo {
                     "Aircraft Carrier", "Major Industrial Complex", "Minor Industrial Complex","Repair Industrial Complex",
                     "Upgrade Industrial Complex","Air Base","Naval Base"};
             //incomplete
-            AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.tank, R.drawable.aaa,
-                    R.drawable.fighter,R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
+            AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.mechanizedinfantry, R.drawable.tank,
+                    R.drawable.aaa, R.drawable.fighter,R.drawable.tacticalbomber, R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
                     R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
-                    R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.repairindustrialcomplex};
+                    R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.minorindustrialcomplex,
+                    R.drawable.repairindustrialcomplex, R.drawable.navalbase};
+
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{4,1,2,2},{6,3,3,2},{5,0,0,1},{10,3,4,4},{11,3,3,4},
                     {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{30,0,0,0}, {15,0,0,0},
                     {1,0,0,0},{20,0,0,0},{15,0,0,0},{15,0,0,0}};
