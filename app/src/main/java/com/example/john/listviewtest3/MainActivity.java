@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     static final String FILENAME = "AnA_version.txt";
     public File filePath;
     String path;
+    static final int DEFAULT_VERSION = 0;
 
 
     FileOutputStream streamOut;
@@ -59,9 +60,9 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 streamOut = new FileOutputStream(file, false);
-                streamOut.write("0".getBytes());
+                streamOut.write(String.valueOf(DEFAULT_VERSION).getBytes());
                 streamOut.close();
-                unitInfo = new UnitInfo(0);
+                unitInfo = new UnitInfo(DEFAULT_VERSION);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -231,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
         lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
                 unitInfo.getUnitPriceArray()));
     }
-    
+
     public void ResetUnitsViewButton(View view) {
         if (!IPCsEmpty()) {
             changeTextView.setText("Change: " + Integer.parseInt(enterIPCsEditText.getText().toString()));
