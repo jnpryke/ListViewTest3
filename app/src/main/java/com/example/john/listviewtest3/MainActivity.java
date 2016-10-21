@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Sets up a dialog box to display all of the units the user has selected
         summaryButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,12 +165,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.version) {
             makeDialogBox();
             return true;
@@ -255,6 +252,7 @@ public class MainActivity extends AppCompatActivity {
                 unitInfo.getUnitPriceArray()));
     }
 
+    // Creates a string to display when the user presses the summary button
     public String makeSummaryString() {
         String[] unitNamesStringArray = unitInfo.getUnitNamesStringArray();
         int[] unitQuantityArray = CustomAdapter.getUnitQuantityArray();
@@ -278,6 +276,8 @@ public class MainActivity extends AppCompatActivity {
         return summaryString;
     }
 
+    // Creates a string that displays the unit information when the user longpresses
+    // the listview item.
     public String makeUnitInfoString(int position) {
         String unitInfoString = "";
         String[] unitNamesStringArray = unitInfo.getUnitNamesStringArray();
@@ -298,7 +298,7 @@ public class MainActivity extends AppCompatActivity {
         return unitInfoString;
     }
 
-
+    // Reads the number in AnA_version.txt
     public void setAnAVersion() {
         File file = new File(path, FILENAME);
         int length = (int) file.length();
@@ -322,7 +322,8 @@ public class MainActivity extends AppCompatActivity {
         ResetAll();
     }
 
-
+    // Sets up the dialog box to allow the user to select which version
+    // of A&A
     public void makeDialogBox(){
 
         SelectVersionDialogFragment selectVersionDialogFragment = new SelectVersionDialogFragment();
@@ -330,6 +331,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // Returns the number that is stored in the AnA_version.txt
     public int getVersion(){
         File file = new File(path, FILENAME);
         int length = (int) file.length();
