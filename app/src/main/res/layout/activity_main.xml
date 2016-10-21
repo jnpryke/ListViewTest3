@@ -35,7 +35,7 @@
             android:text="Reset\nAll"
             style="@style/button_red"
             android:id="@+id/resetButton"
-            android:onClick="Reset" />
+            android:onClick="ResetAll" />
 
         <Button
             android:layout_width="0dp"

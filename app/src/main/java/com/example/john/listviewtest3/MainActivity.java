@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 streamOut = new FileOutputStream(file, false);
-                streamOut.write("1".getBytes());
+                streamOut.write("0".getBytes());
                 streamOut.close();
-                unitInfo = new UnitInfo(1);
+                unitInfo = new UnitInfo(0);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -216,7 +216,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
     }
 
-    public void Reset(View view) {
+    public void ResetAll(View view) {
         enterIPCsEditText.setText("");
         changeTextView.setText("Change: 0");
         costOfUnits = 0;
