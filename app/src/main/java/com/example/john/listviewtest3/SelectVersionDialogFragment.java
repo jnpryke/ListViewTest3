@@ -68,6 +68,7 @@ public class SelectVersionDialogFragment extends DialogFragment {
         return builder.create();
     }
 
+    // Gets the int form the AnA_version.txt
     public int getVersion(){
         File file = new File(path, FILENAME);
         int length = (int) file.length();
@@ -86,6 +87,7 @@ public class SelectVersionDialogFragment extends DialogFragment {
         return 0;
     }
 
+    // Sets the int in the AnA_version.txt
     public void saveVersion(int version){
         File file = new File(path, FILENAME);
         FileOutputStream streamOut;

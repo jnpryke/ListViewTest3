@@ -23,8 +23,6 @@ public class CustomAdapter extends BaseAdapter {
     Context context;
     private static LayoutInflater inflater = null;
 
-
-
     public CustomAdapter(MainActivity mainActivity, int[] AnAImages, int[] unitQuantityArray, int[] unitPriceArray){
         context = mainActivity;
         imageId = AnAImages;
@@ -52,30 +50,26 @@ public class CustomAdapter extends BaseAdapter {
         return position;
     }
 
-
-
+    // Holds values for the listview
     public class Holder
     {
         ImageView img;
         TextView unitQuantityTextView;
     }
 
+    // Sets up the listview
     @Override
     public View getView(final int position, View convertView, ViewGroup parent){
         View rowView;
         rowView = inflater.inflate(R.layout.list_layout, null);
 
         Holder holder = new Holder();
-
         holder.img = (ImageView) rowView.findViewById(R.id.imageView1);
         holder.img.setImageResource(imageId[position]);
-
         holder.unitQuantityTextView = (TextView) rowView.findViewById(R.id.unitQuantityTextView);
 
         ImageButton plusButton = (ImageButton) rowView.findViewById(R.id.imagePlusButton);
         ImageButton minusButton = (ImageButton) rowView.findViewById(R.id.imageMinusButton);
-
-
 
         plusButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -116,6 +110,7 @@ public class CustomAdapter extends BaseAdapter {
         return rowView;
     }
 
+    // Resets all elements of the unitQuantityArray to 0
     public static void reset(){
 
         for(int i = 0; i < unitQuantityArray.length; i++){
@@ -123,6 +118,7 @@ public class CustomAdapter extends BaseAdapter {
         }
     }
 
+    // Returns the unitQuantityArray
     public static int[] getUnitQuantityArray(){
         return unitQuantityArray;
     }
