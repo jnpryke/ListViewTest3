@@ -59,9 +59,9 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 streamOut = new FileOutputStream(file, false);
-                streamOut.write("1".getBytes());
+                streamOut.write("0".getBytes());
                 streamOut.close();
-                unitInfo = new UnitInfo(1);
+                unitInfo = new UnitInfo(0);
             } catch (Exception e) {
                 e.printStackTrace();
             }
