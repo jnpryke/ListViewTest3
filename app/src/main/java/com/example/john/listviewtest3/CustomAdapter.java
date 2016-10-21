@@ -118,7 +118,6 @@ public class CustomAdapter extends BaseAdapter {
         }
     }
 
-    // Returns the unitQuantityArray
     public static int[] getUnitQuantityArray(){
         return unitQuantityArray;
     }
