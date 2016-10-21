@@ -83,8 +83,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-       // unitInfo.setVersion(1);
-
         lv = (ListView) findViewById(R.id.listView);
         lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
                 unitInfo.getUnitPriceArray()));
@@ -233,8 +231,7 @@ public class MainActivity extends AppCompatActivity {
         lv.setAdapter(new CustomAdapter(this, unitInfo.getAnAImages(), unitInfo.getUnitQuantityArray(),
                 unitInfo.getUnitPriceArray()));
     }
-
-    //check to see if any code is really using this function, if not delete. Because is basically the same as ResetUnits
+    
     public void ResetUnitsViewButton(View view) {
         if (!IPCsEmpty()) {
             changeTextView.setText("Change: " + Integer.parseInt(enterIPCsEditText.getText().toString()));
