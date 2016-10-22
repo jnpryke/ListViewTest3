@@ -64,7 +64,7 @@ public class UnitInfo {
                     R.drawable.aaa, R.drawable.fighter,R.drawable.tacticalbomber, R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
                     R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
                     R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.minorindustrialcomplex,
-                    R.drawable.repairindustrialcomplex, R.drawable.navalbase};
+                    R.drawable.repairindustrialcomplex, R.drawable.airbase, R.drawable.navalbase};
 
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{4,1,2,2},{6,3,3,2},{5,0,0,1},{10,3,4,4},{11,3,3,4},
                     {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{30,0,0,0}, {15,0,0,0},
@@ -124,6 +124,21 @@ public class UnitInfo {
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{4,1,2,2},{6,3,3,2},{6,0,1,1},{10,3,4,4},{11,3,3,4},
                     {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{30,0,0,0}, {15,0,0,0},
                     {1,0,0,0},{20,0,0,0},{15,0,0,0},{15,0,0,0}};
+
+        }
+
+        //version 6 = Axis and Allies 1940 Pacific/Europe
+        if(version == 6){
+            versionName="Axis and Allies 1914";
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0};
+            unitPriceArray = new int[]{3,4,6,6,12,9,6,6};
+            unitNamesStringArray = new String[]{"Infantry", "Artillery", "Tank", "Fighter",
+                    "Submarine", "Transport", "Cruiser", "Battleship"};
+            AnAImages = new int[] {R.drawable.infantryww1, R.drawable.artilleryww1, R.drawable.tankww1,
+                    R.drawable.fighterww1,R.drawable.submarine, R.drawable.transport,
+                    R.drawable.cruiserww1, R.drawable.battleshipww1};
+            unitStatsInfoArray = new int[][]{{3,2,3,1},{4,3,3,1},{6,2,3,1},{6,2,2,2},
+                   {6,2,2,2},{6,0,0,2},{9,3,3,3},{12,4,4,2}};
 
         }
 
