@@ -144,14 +144,29 @@ public class UnitInfo {
         //version 7 = Axis and Allies Europe
         if(version == 7){
             versionName="Axis and Allies Europe 1999";
-            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0};
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0};
             unitPriceArray = new int[]{3,4,5,5,12,15,8,8,12,24,18};
             unitNamesStringArray = new String[]{"Infantry", "Artillery", "Armor", "AntiAircraft Gun", "Fighter",
                     "Bomber","Submarine", "Transport", "Destroyer", "Battleship", "Aircraft Carrier"};
-            AnAImages = new int[] {R.drawable.infantry1999, R.drawable.artillery1999, R.drawable.tank1999,
-                    R.drawable.aaa1999,R.drawable.fighterww1,R.drawable.submarine, R.drawable.transport,
-                    R.drawable.cruiserww1, R.drawable.battleshipww1};
+            AnAImages = new int[] {R.drawable.infantry1999, R.drawable.artillery1999, R.drawable.tank1999, R.drawable.aaa1999,
+                    R.drawable.fighter1999,R.drawable.bomber1999,R.drawable.submarine1999, R.drawable.transport1999,
+                    R.drawable.destroyer1999, R.drawable.battleship1999, R.drawable.aircraftcarrier1999};
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{5,3,2,2},{5,0,1,1},{12,3,4,4},
+                    {15,4,1,6},{8,2,2,2},{8,0,1,2},{12,3,3,2},{24,4,4,2},{18,1,3,2}};
+        }
+
+        //not complete
+        //version 8 = Axis and Allies Pacific
+        if(version == 8){
+            versionName="Axis and Allies Pacific 1999";
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0};
+            unitPriceArray = new int[]{3,4,4,5,5,12,15,8,8,12,24,18};
+            unitNamesStringArray = new String[]{"Infantry", "Marine", "Artillery", "Armor", "AntiAircraft Gun", "Fighter",
+                    "Bomber","Submarine", "Transport", "Destroyer", "Battleship", "Aircraft Carrier"};
+            AnAImages = new int[] {R.drawable.infantry1999, R.drawable.marine1999, R.drawable.artillery1999, R.drawable.tank1999,
+                    R.drawable.aaa1999, R.drawable.fighter1999,R.drawable.bomber1999,R.drawable.submarine1999, R.drawable.transport1999,
+                    R.drawable.destroyer1999, R.drawable.battleship1999, R.drawable.aircraftcarrier1999};
+            unitStatsInfoArray = new int[][]{{3,1,2,1},{4,1,2,1},{4,2,2,1},{5,3,2,2},{5,0,1,1},{12,3,4,4},
                     {15,4,1,6},{8,2,2,2},{8,0,1,2},{12,3,3,2},{24,4,4,2},{18,1,3,2}};
         }
 

@@ -1,12 +1,17 @@
 <resources>
     <string name="app_name">A\u0026A UnitCalc</string>
     <string name="select_version">Select Version</string>
-    <string name="ana_version0">A\u0026A 1942 Second Edition</string>
-    <string name="ana_version1">A\u0026A 1941</string>
-    <string name="ana_version2">A\u0026A 1940 Pacific/Europe Second Edition</string>
-    <string name="ana_version3">A\u0026A 1942 Spring</string>
-    <string name="ana_version4">A\u0026A Anniversary Edition</string>
-    <string name="ana_version5">A\u0026A 1940 Pacific/Europe</string>
+    <string name="select_axis_and_allies_version">Select Axis and Allies Version</string>
     <string name="set">Set</string>
     <string name="cancel">Cancel</string>
 </resources>
+
+<!--
+
+    <string name="ana_version0">1942 Second Edition</string>
+    <string name="ana_version1">1941</string>
+    <string name="ana_version2">1940 Pacific/Europe Second Edition</string>
+    <string name="ana_version3">1942 Spring</string>
+    <string name="ana_version4">Anniversary Edition</string>
+    <string name="ana_version5">1940 Pacific/Europe</string>
+-->

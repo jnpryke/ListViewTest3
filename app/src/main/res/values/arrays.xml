@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="versions">
-        <item>A\u0026A 1942 Second Edition</item>
-        <item>A\u0026A 1941</item>
-        <item>A\u0026A 1940 Pacific/Europe Second Edition</item>
-        <item>A\u0026A 1942 Spring</item>
-        <item>A\u0026A Anniversary Edition</item>
-        <item>A\u0026A 1940 Pacific/Europe</item>
-        <item>A\u0026A 1914</item>
-        <item>A\u0026A Europe</item>
+        <item>1942 Second Edition</item>
+        <item>1941</item>
+        <item>1940 Europe/Pacific Second Edition</item>
+        <item>1942 Spring</item>
+        <item>Anniversary Edition</item>
+        <item>1940 Europe/Pacific</item>
+        <item>1914</item>
+        <item>Europe</item>
+        <item>Pacific</item>
     </string-array>
 </resources>
