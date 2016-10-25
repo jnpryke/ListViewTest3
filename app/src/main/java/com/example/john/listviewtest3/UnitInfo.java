@@ -49,26 +49,26 @@ public class UnitInfo {
                     {6,2,1,2},{7,0,0,2},{8,2,2,2},{16,4,4,2},{12,1,2,2}};
 
         }
-        //!complete
-        //version 2 = Axis and Allies 1940 Pacific/Europe Second Edition
+
+        //version 2 = Axis and Allies 1940 Europe/Pacific Second Edition
         if(version == 2){
-            versionName="Axis and Allies 1940 Pacific/Europe second edition";
+            versionName="Axis and Allies 1940 Europe/Pacific second edition";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-            unitPriceArray = new int[]{3,4,4,6,5,10,11,12,6,7,8,12,20,16,30,12,1,20,15,15};
+            unitPriceArray = new int[]{3,4,4,6,5,10,11,12,6,7,8,12,20,16,12,20,1,30,15,15};
             unitNamesStringArray = new String[]{"Infantry", "Artillery", "Mechanized Infantry", "Tank", "AAA", "Fighter",
                     "Tactical Bomber", "Strategic Bomber", "Submarine", "Transport", "Destroyer", "Cruiser", "Battleship",
-                    "Aircraft Carrier", "Major Industrial Complex", "Minor Industrial Complex","Repair Industrial Complex",
-                    "Upgrade Industrial Complex","Air Base","Naval Base"};
+                    "Aircraft Carrier", "Minor Industrial Complex", "Upgrade Industrial Complex","Repair Industrial Complex",
+                    "Major Industrial Complex", "Air Base","Naval Base"};
             //incomplete
             AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.mechanizedinfantry, R.drawable.tank,
-                    R.drawable.aaa, R.drawable.fighter,R.drawable.tacticalbomber, R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
-                    R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
-                    R.drawable.aircraftcarrier, R.drawable.industrialcomplex, R.drawable.minorindustrialcomplex,
-                    R.drawable.repairindustrialcomplex, R.drawable.airbase, R.drawable.navalbase};
+                    R.drawable.aaa, R.drawable.fighter,R.drawable.tacticalbomber2, R.drawable.bomber, R.drawable.submarine,
+                    R.drawable.transport, R.drawable.destroyer, R.drawable.cruiser, R.drawable.battleship,
+                    R.drawable.aircraftcarrier, R.drawable.minorindustrialcomplex,  R.drawable.upgradeindustrialcomplex,
+                    R.drawable.repairindustrialcomplex, R.drawable.industrialcomplex,  R.drawable.airbase2, R.drawable.navalbase};
 
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{4,1,2,2},{6,3,3,2},{5,0,0,1},{10,3,4,4},{11,3,3,4},
-                    {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{30,0,0,0}, {15,0,0,0},
-                    {1,0,0,0},{20,0,0,0},{15,0,0,0},{15,0,0,0}};
+                    {12,4,1,6},{6,2,1,2},{7,0,0,2},{8,2,2,2},{12,3,3,2},{20,4,4,2},{16,0,2,2},{12,0,0,0}, {20,0,0,0},
+                    {1,0,0,0},{30,0,0,0},{15,0,0,0},{15,0,0,0}};
 
         }
 
@@ -107,9 +107,9 @@ public class UnitInfo {
         }
 
         //!complete
-        //version 5 = Axis and Allies 1940 Pacific/Europe
+        //version 5 = Axis and Allies 1940 Europe/Pacific
         if(version == 5){
-            versionName="Axis and Allies 1940 Pacific/Europe second edition";
+            versionName="Axis and Allies 1940 Europe/Pacific second edition";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
             unitPriceArray = new int[]{3,4,4,6,5,10,11,12,6,7,8,12,20,16,30,12,1,20,15,15};
             unitNamesStringArray = new String[]{"Infantry", "Artillery", "Mechanized Infantry", "Tank", "AAA", "Fighter",
@@ -127,7 +127,7 @@ public class UnitInfo {
 
         }
 
-        //version 6 = Axis and Allies 1940 Pacific/Europe
+        //version 6 = Axis and Allies 1914
         if(version == 6){
             versionName="Axis and Allies 1914";
             unitQuantityArray = new int[]{0,0,0,0,0,0,0,0};
@@ -139,7 +139,6 @@ public class UnitInfo {
                     R.drawable.cruiserww1, R.drawable.battleshipww1};
             unitStatsInfoArray = new int[][]{{3,2,3,1},{4,3,3,1},{6,2,3,1},{6,2,2,2},
                    {6,2,2,2},{6,0,0,2},{9,3,3,3},{12,4,4,2}};
-
         }
 
     }
