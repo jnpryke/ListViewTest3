@@ -6,4 +6,9 @@
         android:title="@string/select_version"
         android:orderInCategory="100"
         app:showAsAction="always" />
+
+    <item android:id="@+id/read_me"
+        android:title="@string/read_me"
+        app:showAsAction="never"/>
+
 </menu>

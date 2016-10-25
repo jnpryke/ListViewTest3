@@ -160,7 +160,11 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.version) {
-            makeDialogBox();
+            makeSelectVersionDialogBox();
+            return true;
+        }
+
+        if(id == R.id.read_me){
             return true;
         }
 
@@ -307,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Sets up the dialog box to allow the user to select which version
     // of A&A
-    public void makeDialogBox(){
+    public void makeSelectVersionDialogBox(){
 
         SelectVersionDialogFragment selectVersionDialogFragment = new SelectVersionDialogFragment();
         selectVersionDialogFragment.show(getFragmentManager(),path);
