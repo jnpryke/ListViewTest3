@@ -25,16 +25,14 @@
         android:id="@+id/imagePlusButton"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:src="@drawable/plus"
         android:layout_toStartOf="@+id/imageMinusButton"
-        android:background="#00000000" />
+        android:background="@drawable/plus_button_selector" />
 
     <ImageButton
         android:id="@+id/imageMinusButton"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:src="@drawable/minus"
-        android:background="#00000000"
+        android:background="@drawable/minus_button_selector"
         android:layout_alignParentRight="true" />
 
 </RelativeLayout>
