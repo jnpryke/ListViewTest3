@@ -7,6 +7,8 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.v7.view.ContextThemeWrapper;
+import android.view.View;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -15,7 +17,7 @@ import java.io.FileOutputStream;
 
 
 import static com.example.john.listviewtest3.MainActivity.FILENAME;
-
+import static com.example.john.listviewtest3.R.attr.colorPrimary;
 
 
 /**
@@ -35,7 +37,6 @@ public class SelectVersionDialogFragment extends DialogFragment {
         checked = getVersion();
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        // Set the dialog title
         builder.setTitle(R.string.select_axis_and_allies_version)
                 // Specify the list array, the items to be selected by default (null for none),
                 // and the listener through which to receive callbacks when items are selected
@@ -53,7 +54,6 @@ public class SelectVersionDialogFragment extends DialogFragment {
                         // or return them to the component that opened the dialog
                         saveVersion(version);
 
-                        //MainActivity.someHow();
                         ((MainActivity)getActivity()).setAnAVersion();
 
                     }

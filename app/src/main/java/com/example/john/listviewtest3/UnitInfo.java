@@ -88,7 +88,6 @@ public class UnitInfo {
 
         }
 
-        //!complete
         //version 4 = Axis and Allies Anniversary Edition
         if(version == 4){
             versionName="Axis and Allies Anniversary Edition";
@@ -140,7 +139,6 @@ public class UnitInfo {
                    {6,2,2,2},{6,0,0,2},{9,3,3,3},{12,4,4,2}};
         }
 
-        //not complete
         //version 7 = Axis and Allies Europe
         if(version == 7){
             versionName="Axis and Allies Europe 1999";
@@ -155,7 +153,6 @@ public class UnitInfo {
                     {15,4,1,6},{8,2,2,2},{8,0,1,2},{12,3,3,2},{24,4,4,2},{18,1,3,2}};
         }
 
-        //not complete
         //version 8 = Axis and Allies Pacific
         if(version == 8){
             versionName="Axis and Allies Pacific 1999";
@@ -169,6 +166,40 @@ public class UnitInfo {
             unitStatsInfoArray = new int[][]{{3,1,2,1},{4,1,2,1},{4,2,2,1},{5,3,2,2},{5,0,1,1},{12,3,4,4},
                     {15,4,1,6},{8,2,2,2},{8,0,1,2},{12,3,3,2},{24,4,4,2},{18,1,3,2}};
         }
+
+        //version 9 = Axis and Allies Europe
+        if(version == 9){
+            versionName="Axis and Allies 2nd Edition";
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0};
+            unitPriceArray = new int[]{3,5,5,12,15,8,8,24,18,15,1};
+            unitNamesStringArray = new String[]{"Infantry", "Armor", "AntiAircraft Gun", "Fighter","Bomber",
+                    "Submarine", "Transport", "Battleship", "Aircraft Carrier", "Industrial Complex",
+                    "Repair Industrial Complex"};
+            AnAImages = new int[] {R.drawable.infantry1999, R.drawable.tank1999, R.drawable.aaa1999,
+                    R.drawable.fighter1999, R.drawable.bomber1999,R.drawable.submarine1999, R.drawable.transport1999,
+                    R.drawable.battleship1999, R.drawable.aircraftcarrier1999,R.drawable.industrialcomplex,
+                    R.drawable.repairindustrialcomplex};
+            unitStatsInfoArray = new int[][]{{3,1,2,1},{5,3,2,2},{5,0,1,1},{12,3,4,4},
+                    {15,4,1,6},{8,2,2,2},{8,0,1,2},{24,4,4,2},{18,1,3,2},{15,0,0,0},
+                    {1,0,0,0}};
+        }
+
+        //version 10 = Axis and Allies Revised
+        if(version == 10){
+            versionName="Axis and Allies Revised";
+            unitQuantityArray = new int[]{0,0,0,0,0,0,0,0,0,0,0,0};
+            unitPriceArray = new int[]{3,4,5,5,10,15,6,7,8,24,14,15,1};
+            unitNamesStringArray = new String[]{"Infantry", "Artillery", "Tank", "AAA", "Fighter", "Bomber",
+                    "Submarine", "Transport", "Destroyer", "Battleship", "Aircraft Carrier",
+                    "Industrial Complex"};
+            AnAImages = new int[] {R.drawable.infantry, R.drawable.artillery, R.drawable.tank, R.drawable.aaa,
+                    R.drawable.fighter,R.drawable.bomber, R.drawable.submarine, R.drawable.transport,
+                    R.drawable.destroyer, R.drawable.battleship, R.drawable.aircraftcarrier,
+                    R.drawable.industrialcomplex};
+            unitStatsInfoArray = new int[][]{{3,1,2,1},{4,2,2,1},{5,3,3,2},{5,0,1,1},{10,3,4,4},{15,4,1,6},
+                    {8,2,2,2},{8,0,1,2},{12,3,3,2},{24,4,4,2},{16,1,3,2},{15,0,0,0}};
+        }
+
 
     }
 
