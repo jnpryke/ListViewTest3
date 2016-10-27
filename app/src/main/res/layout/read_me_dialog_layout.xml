@@ -5,26 +5,27 @@
     android:layout_width="match_parent">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:paddingTop="16dp">
 
         <TextView
-            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/summaryTextView"
-            android:textSize="20sp"
-            android:text="Infantry: 1\nArtillery: 2"/>
+            android:layout_width="match_parent"
+            android:id="@+id/readMeTextView"
+            android:textSize="25sp"
+            android:text="@string/readme_string"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/cancelSummaryButton"
+            android:id="@+id/cancelReadMeButton"
             style="@style/button_red"
             android:text="@string/close"/>
+
     </LinearLayout>
 </ScrollView>

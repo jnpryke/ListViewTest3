@@ -165,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(id == R.id.read_me){
+            makeReadMeDialogBox();
             return true;
         }
 
@@ -316,6 +317,23 @@ public class MainActivity extends AppCompatActivity {
         SelectVersionDialogFragment selectVersionDialogFragment = new SelectVersionDialogFragment();
         selectVersionDialogFragment.show(getFragmentManager(),path);
 
+    }
+
+    public void makeReadMeDialogBox(){
+        final Dialog dialog = new Dialog(MainActivity.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.read_me_dialog_layout);
+        dialog.setCancelable(true);
+
+        //set up button
+        Button button = (Button) dialog.findViewById(R.id.cancelReadMeButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 
     // Returns the number that is stored in the AnA_version.txt

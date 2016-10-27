@@ -5,14 +5,12 @@
     <string name="set">Set</string>
     <string name="cancel">Cancel</string>
     <string name="read_me">Read me</string>
+    <string name="close">Close</string>
+    <string name="readme_string">To get information about an A\u0026A unit image, press on that unit image for half a second and
+        a box will appear that displays the name, attack, defense, and cost of that unit.
+        \n\nThis app does not incorporate the research and development chart for cheaper units. If you would like to see
+        this functionality please comment on the play store about this.
+        \n\nAbout the developer: I am a huge fan of the Axis and Allies series and I personally use this app every time I
+        play because I found that cash or using a notepad is tedious. I hope you can get some good use out of this app!
+        \n\nAnd remember to bomb the harbor!\n\n</string>
 </resources>
-
-<!--
-
-    <string name="ana_version0">1942 Second Edition</string>
-    <string name="ana_version1">1941</string>
-    <string name="ana_version2">1940 Pacific/Europe Second Edition</string>
-    <string name="ana_version3">1942 Spring</string>
-    <string name="ana_version4">Anniversary Edition</string>
-    <string name="ana_version5">1940 Pacific/Europe</string>
--->
