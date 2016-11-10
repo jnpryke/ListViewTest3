@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.0"
 
     defaultConfig {
-        applicationId "com.example.john.listviewtest3"
+        applicationId "com.pryke.john.listviewtest3"
         minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
