@@ -7,7 +7,7 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.v7.view.ContextThemeWrapper;
+//import android.support.v7.view.ContextThemeWrapper;
 import android.view.View;
 
 import java.io.File;
